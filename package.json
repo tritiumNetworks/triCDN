@@ -1,0 +1,16 @@
+{
+  "name": "triCDN",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tritiumNetworks/triCDN.git",
+  "author": "pmh-only <pmhstudio.pmh@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto-random-string": "^3.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "mime": "^2.4.6",
+    "multer": "^1.4.2"
+  }
+}

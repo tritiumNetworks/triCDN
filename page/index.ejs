@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TriCDN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1213a7cbad.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+  </head>
+  <body class="rgba-lime-slight">
+    <div class="container p-3 dusty-grass-gradient rounded">
+      <span class="display-4 text-white"><img src="/src/TritiumLogo.png" width="80" alt="Tri">CDN</span>
+      <form action="/api" method="post" class="mt-5" enctype="multipart/form-data">
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="file" name="file" aria-describedby="fileInput">
+            <label class="custom-file-label" for="file">전송할 파일... (~100MB / 쿨다운 30초)</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">전송!</button>
+        <span class="stats">cdn: <%= cdn %> files / temp: <%= temp %> files</span>
+      </form>
+    </div>
+  </body>
+</html>
