@@ -12,7 +12,7 @@ const { renderFile: render } = require('ejs')
 const cooldown = []
 
 const app = express()
-const upl = multer({ dest: 'temp/', limits: { fileSize: '100MB' } })
+const upl = multer({ dest: 'temp/', limits: { fileSize: 100000000 } }) //100000000 바이트 는 100MB 입니다. https://www.npmjs.com/package/multer 참고바랍니다
 
 app.use(cors())
 app.use('/d', express.static(PATH + '/cdn'))
