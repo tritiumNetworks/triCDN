@@ -31,21 +31,34 @@
     <meta property="og:image" content="https://cdn.trinets.xyz/d/cBcG4O7sGW.png">
     <meta property="twitter:image:src" content="/src/TritiumLogo.png">
     <link rel="shortcut icon" href="/src/TritiumLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/main.css">
   </head>
-  <body class="rgba-lime-slight">
-    <div class="container p-3 dusty-grass-gradient rounded">
-      <span class="display-4 text-white"><img src="/src/TritiumLogo.png" width="80" alt="Tri">CDN</span>
-      <form action="/api" method="post" class="mt-5" enctype="multipart/form-data">
-        <div class="input-group">
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="file" name="file" aria-describedby="fileInput">
-            <label class="custom-file-label" for="file">전송할 파일... (~100MB / 쿨다운 30초)</label>
+  <body>
+    <div class="edge-header lady-lips-gradient"></div>
+    <div class="mb-5 container free-bird text-white">
+      <h1 class="h1">TriCDN - Mirror2</h1>
+      <div class="w-responsive form">
+        <form action="/api" method="post" class="bg-white p-5 shadow rouneded border border-light" enctype="multipart/form-data">
+          <div class="input-group mb-3">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="file" name="file">
+              <label class="custom-file-label" for="file">전송할 파일... (~100MB / 쿨다운 30초)</label>
+            </div>
           </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary">전송!</button>
-        <span class="stats">cdn: <%= cdn %> files / temp: <%= temp %> files / 지원하는 파일 목록은 <a href="https://cdn.trinets.xyz/d/6m1SUXRmK6.json">여기</a>를 참고하세요</span>
-      </form>
+<!-- 
+          <div class="d-flex justify-content-around mb-3 text-dark">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="shortUrl" id="shortUrl">
+              <label class="custom-control-label" for="shortUrl">short.kro.kr 연동</label>
+            </div>
+          </div> -->
+  
+          <button type="submit" class="btn btn-primary">전송!</button>
+          <span class="text-dark">cdn: <%= cdn %> files / temp: <%= temp %> files / 지원하는 파일 목록은 <a href="https://cdn.trinets.xyz/d/6m1SUXRmK6.json">여기</a>를 참고하세요</span>
+        </form>
+      </div>
     </div>
+
+    <script src="/src/main.js"></script>
   </body>
 </html>
